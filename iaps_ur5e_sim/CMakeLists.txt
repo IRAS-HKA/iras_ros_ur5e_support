@@ -172,46 +172,13 @@ target_link_libraries(pose_publisher ${catkin_LIBRARIES})
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-   scripts/my_action.py
-   scripts/my_planner.py
-   scripts/my_action_server.py
    scripts/ap_movePose.py
    scripts/ap_moveTwist.py
    scripts/ap_moveJointsPos.py
    scripts/robot_pose_publisher.py
-   scripts/playback_rosbag.py
    scripts/admittanz_regler.py
    scripts/admittanz_regler_publisher.py
-   scripts/sim_wrench_pub.py
-   scripts/rosbag2csv.py
-   scripts/approaching_script.py
    scripts/admittance_force_controller_test.py
-   scripts/deployment_script.py
-   scripts/image_data_generation.py
-   scripts/kovis_test.py
-   scripts/kovis_picture.py
-   scripts/kovis_ibvs.py
-   scripts/demo_plug.py
-   scripts/kovis_validation.py
-   scripts/jens_bachelorarbeit.py
-   scripts/kovis_picture_v2.py
-   scripts/kovis_picture_v3.py
-   scripts/kovis_pixel_validation.py
-   scripts/record_wrench_profile.py
-   scripts/move_sinus_sweep.py
-   scripts/kovis_ibvs_hough.py
-   scripts/pih_movement_test.py
-   scripts/pih_test.py
-   scripts/pih_picture_trans.py
-   scripts/pih_picture_trans_rot.py
-   scripts/pih_picture_trans_rot_other_direction.py
-   scripts/pih_timeseries.py
-   scripts/pih_cont_movement_test.py
-   scripts/pih_evaluate.py
-   scripts/pih_evaluate_rotation.py
-   scripts/kovis_ibvs_cheatmode.py
-   scripts/pih_picture_trans_rot_fixed_degrees.py
-   scripts/pih_picture_trans_newLines.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
