@@ -1,0 +1,38 @@
+<launch>
+    <!-- start ur5e robot driver 
+    <include file="$(find ur_robot_driver)/launch/ur5e_bringup.launch">
+        <arg name="robot_ip" value="192.168.1.100" />
+        <arg name="kinematics_config" value="$(find iaps_ur5e_sim)/config/ur5e_calibration.yaml" />
+    </include> -->
+
+    <!-- load controller settings -->
+    <include file="$(find iaps_ur5e_sim)/launch/my_controllers.launch" />
+    
+    <!-- start action nodes -->
+    <!-- <node name="ap_movePose" pkg="iaps_ur5e_sim" type="ap_movePose.py" /> -->
+    <!-- <node name="ap_moveJointsPos" pkg="iaps_ur5e_sim" type="ap_moveJointsPos.py" /> -->
+    <!-- <node name="ap_moveTwist" pkg="iaps_ur5e_sim" type="ap_moveTwist.py" /> -->
+    <!-- <node name="admittanz_regler" pkg="iaps_ur5e_sim" type="admittanz_regler.py" /> -->
+
+    <node name="robot_pose" pkg="iaps_ur5e_sim" type="robot_pose_publisher.py" />
+
+    <!-- load realsense camera -->
+    <!--<include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="color_width" value="1280" /> 
+        <arg name="color_height" value="720" />
+        <arg name="color_fps" value="15" /> -->
+        <!-- <arg name="enable_depth" value="false" /> -->
+        <!--<arg name="enable_confidence"  value="false"/> -->
+        <!-- <arg name="enable_stereo" value="false"/> -->
+
+
+
+     <!--</include>-->
+
+    <!-- start egh_80_iol_n gripper service -->
+    <node name="egh_80_iol_n" pkg="egh_80_iol_n" type="egh_80_iol_n_service.py" />
+
+    <!-- start ftn_axia_80 sensor node -->
+    <node name="ftn_axia" pkg="ftn_axia80" type="ftn-axia-publisher.py" /> 
+
+</launch>

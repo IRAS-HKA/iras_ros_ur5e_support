@@ -1,0 +1,17 @@
+<launch>
+    <!-- Load controller and hardware configuration -->
+    <rosparam file="$(find iaps_ur5e_sim)/config/my_ur5e_controllers.yaml" command="load"></rosparam>
+
+    <!-- Spawn initial controller -->
+    <node 
+        name="controller_spawner_initial" 
+        pkg="controller_manager" 
+        type="spawner"
+        args="
+        twist_controller
+        "
+    />
+    
+
+</launch>
+
