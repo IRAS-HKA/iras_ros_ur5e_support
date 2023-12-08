@@ -30,9 +30,9 @@
      <!--</include>-->
 
     <!-- start egh_80_iol_n gripper service -->
-    <node name="egh_80_iol_n" pkg="egh_80_iol_n" type="egh_80_iol_n_service.py" />
+    <node name="egh_80_iol_n" pkg="egh_80_iol_n" type="egh_80_iol_n_service.py" args="192.168.1.110" />
 
     <!-- start ftn_axia_80 sensor node -->
-    <node name="ftn_axia" pkg="ftn_axia80" type="ftn-axia-publisher.py" /> 
+    <node name="ftn_axia" pkg="ftn_axia80" type="ftn-axia-publisher.py" args="192.168.1.120" /> 
 
 </launch>
