@@ -12,6 +12,16 @@
         "
     />
     
+    <!-- Spawn stopped controller -->
+    <node 
+        name="controller_spawner_stopped" 
+        pkg="controller_manager" 
+        type="spawner"
+        args="
+        --stopped scaled_pos_joint_traj_controller
+        "
+    />
+    
 
 </launch>
 
